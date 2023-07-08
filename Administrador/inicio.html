@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="../css/estiloHeader/admin.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="../css/admin/gestion.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../css/estiloHeader/admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../css/admin/gestion.css">
 </head>
 <style type="text/css">
 
 </style>
 <body>
-	<div class="overlay" id="overlay">
+
+  <!-- FORMULARIO PARA EL REGISTRO DE USUARIOS-->
+  <div class="overlay" id="overlay" >
         <div class="pop-up" id="pop-up">
             <a href="#" id="btn-cerrar" class="btn-cerrar"><i class="bi bi-x-lg"></i></a>
             <h2 class="equipo">Registro de estudiantes</h2>
             <form accept="" method="">
-            	<input type="text" name="nombre" placeholder="Nombres">
-            	<input type="text" name="apellido1" placeholder="Apellido paterno">
-            	<input type="text" name="apellido2" placeholder="Apellido materno">
-            	<input type="text" name="CURP" placeholder="CURP">
-            	<input type="emaiñ" name="correo" placeholder="correo@institucional">
-            	<label for="rol">Selecciona el rol:</label><br>
-  				<select name="rol" id="rol">
-   				<option value="estudiante">Estudiante</option>
-    			<option value="docente">Docente</option>
- 				 </select>
-            	<br><input type="submit" name="" value="Agregar">	
+              <input type="text" name="nombre" placeholder="Nombres" required="">
+              <input type="text" name="apellido1" placeholder="Apellido paterno" required="">
+              <input type="text" name="apellido2" placeholder="Apellido materno">
+              <input type="text" name="CURP" placeholder="CURP">
+              <input type="emaiñ" name="correo" placeholder="correo@institucional">
+              <label for="rol">Selecciona el rol del nuevo usuario:</label><br>
+          <select name="rol" id="rol">
+          <option value="estudiante">Estudiante</option>
+          <option value="docente">Docente</option>
+         </select>
+              <br><input type="submit" name="" value="Agregar"> 
             </form>
 
         </div>
     </div>
-	<div class="background"></div>
-	<header class="header">
+    <!--Termina el registro de usuarios-->
+    <!--
+      <div class="overla" id="overla">
+        <div class="pop-u" id="pop-u">
+            <a href="#" id="btn-cerra" class="btn-cerra"><i class="bi bi-x-lg"></i></a>
+            <h2 class="equipo">Registro de estudiantes</h2>
+            <form accept="" method="">
+              <input type="text" name="nombre" placeholder="Nombres" required="">
+              <input type="text" name="apellido1" placeholder="Apellido paterno" required="">
+              <input type="text" name="apellido2" placeholder="Apellido materno">
+              <input type="text" name="CURP" placeholder="CURP">
+              <input type="emaiñ" name="correo" placeholder="correo@institucional">
+              <label for="rol">Selecciona ek estado del usuario:</label><br>
+          <select name="rol" id="rol">
+          <option value="estudiante">Activado</option>
+          <option value="docente">Desactivado</option>
+         </select>
+              <br><input type="submit" name="" value="Modificar"> 
+            </form>
+
+        </div>
+    </div>
+-->
+    <!--Formulario para modificar un usuario-->
+
+    <!--Termino para modificar-->
+  <div class="background"></div>
+  <header class="header">
     <div class="container">
     <div class="btn-menu">
       <label for="btn-menu">☰</label>
@@ -53,16 +81,16 @@
 <div class="container-menu">
   <div class="cont-menu">
 
-  	<div class="perfil"><i class="bi bi-person-circle"></i><br>
-  		<h4>Admin</h4></div>
+    <center><div class="perfil"><i class="bi bi-person-circle"></i><br>
+      <h4>Admin</h4></div></center>
 
-    <nav> 	
+    <nav>   
       <a href="">Editar Perfil</a>
       <a href="">Gestionar docentes</a>
       <a href="">Gestionar estudiantes</a>
       <div class="min-menA">
-			<a href="#" class="btn-abrir" id="btn-abrir">Agregar usuario</a>
-		</div>
+      <a href="#" class="btn-abrir" id="btn-abrir">Agregar usuario</a>
+    </div>
       <div class="salir"><a href="">Salir</a></div>
       
     </nav>
@@ -71,29 +99,28 @@
 </div>
 
 
-			<div class="contenedor">
-				<div class="acciones">
+      <div class="contenedor">
+        <div class="acciones">
 
-					<h1>Gestión de usuarios</h1>
+          <h1>Gestión de usuarios</h1>
 
-					<table>
-						<thead>
-							<tr>
-								<td colspan="3">USUARIOS<!--Estudiantes o docentes depende de q seleccione en el menu--></td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Nombre del usuario</td>
-								<td><a>Editar</a></td>
-								<td><a>Eliminar</a></td>
-							</tr>
-						</tbody>
-					</table>
-					
-				</div>
-			</div>
+          <table>
+            <thead>
+              <tr>
+                <td colspan="3">USUARIOS<!--Estudiantes o docentes depende de q seleccione en el menu--></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2">Nombre del usuario</td>
+                <td><a class="btn-abre" id="btn-abre">Editar</a></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
 
-	<script type="text/javascript" src="../js/agregar.js"></script>
+  <script type="text/javascript" src="../js/agregar.js"></script>
 </body>
 </html>
