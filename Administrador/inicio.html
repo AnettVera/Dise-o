@@ -34,32 +34,46 @@
 
         </div>
     </div>
-    <!--Termina el registro de usuarios-->
-    <!--
-      <div class="overla" id="overla">
-        <div class="pop-u" id="pop-u">
-            <a href="#" id="btn-cerra" class="btn-cerra"><i class="bi bi-x-lg"></i></a>
-            <h2 class="equipo">Registro de estudiantes</h2>
-            <form accept="" method="">
-              <input type="text" name="nombre" placeholder="Nombres" required="">
-              <input type="text" name="apellido1" placeholder="Apellido paterno" required="">
-              <input type="text" name="apellido2" placeholder="Apellido materno">
-              <input type="text" name="CURP" placeholder="CURP">
-              <input type="emaiñ" name="correo" placeholder="correo@institucional">
-              <label for="rol">Selecciona ek estado del usuario:</label><br>
-          <select name="rol" id="rol">
-          <option value="estudiante">Activado</option>
-          <option value="docente">Desactivado</option>
+    <!--Formulario para modificar un usuario
+      ESTO FUE LO QUE SE CAMBIO-->
+<input type="checkbox" id="btn-modal">
+    <div class="container-modal">
+      <div class="content-modal">
+        <h2>Nombre <!--DEL USUARIO--></h2>
+        <form action="" method="" id="formulario-modal">
+
+          <label>Nombre:</label>
+          <input type="text" name="nombre">
+
+          <label>Apellido paterno:</label>
+          <input type="text" name="ap1">
+
+          <label>Apellido materno:</label>
+          <input type="text" name="ape2">
+
+          <label>CURP:</label>
+          <input type="text" name="curp">
+
+          <label>Contraseña:</label>
+          <input type="text" name="pass">
+
+           <label for="rol">Selecciona el estado del usuario:</label><br>
+          <select name="estado" id="estado">
+          <option value="true">Activo</option>
+          <option value="false">Desactivo</option>
          </select>
-              <br><input type="submit" name="" value="Modificar"> 
-            </form>
+              <br><input type="submit" name="" value="modificar" id="btn-enviar"> 
 
+        </form>
+        <div class="btn-cerrar">
+          <label for="btn-modal">
+            Cancelar
+          </label>
         </div>
+      </div>
     </div>
--->
-    <!--Formulario para modificar un usuario-->
 
-    <!--Termino para modificar-->
+    <!--TERMINA LA 1° MODIFICACION-->
   <div class="background"></div>
   <header class="header">
     <div class="container">
@@ -113,7 +127,18 @@
             <tbody>
               <tr>
                 <td colspan="2">Nombre del usuario</td>
-                <td><a class="btn-abre" id="btn-abre">Editar</a></td>
+                <td>
+                  <!--2° MODIFICACIÓN-->
+                  <div class="boton-modal">
+                    <label for="btn-modal">
+                      Editar
+                    </label>
+                  </div>
+                   <!-- ULTIMA-->
+                </td>
+
+
+
               </tr>
             </tbody>
           </table>
@@ -122,5 +147,9 @@
       </div>
 
   <script type="text/javascript" src="../js/agregar.js"></script>
+
+
+
+
 </body>
 </html>
