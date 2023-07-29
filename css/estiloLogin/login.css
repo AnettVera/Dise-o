@@ -96,6 +96,7 @@ section h2::after {
     background-color: #f8f8f8;
     position: relative;
     border-radius: 50px;
+    z-index:2;
 }
 
 
@@ -112,7 +113,7 @@ section h2::after {
   }
 }
 
-@media (min-width: 768px) and (max-width: 2560px){
+@media (min-width: 426px) and (max-width: 2560px){
   .log {
     min-width: 350px;
     max-width: 400px;
