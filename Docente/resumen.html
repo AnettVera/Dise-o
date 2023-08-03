@@ -80,65 +80,56 @@
 
   <table>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif"><!--Este se queda por defecto pero 
+      se debe cambiar por la calificación de la bd-->AU</div></td>
+    </tr>
+
+    <tr>
+     <td>Hernandez Bernal Nieobe Jacqueline <div class="calif">DE</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Maria del Carmen Rodriguez Espinoza <div class="calif">SA</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>María José Villafañez Salgado<div class="calif">NA</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Leyla Alondra Villanueva Estrada<div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Moises Santiago Gonzalez Retana<div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Refugio Soledad Villafañez Hernandez<div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
     <tr>
-     <td>Nombre Completo Alumno</td>
+     <td>Nombre Completo Alumno <div class="calif">SC</div></td>
     </tr>
-    <tr>
-     <td>Nombre Completo Alumno</td>
-    </tr>
-    <tr>
-     <td>Nombre Completo Alumno</td>
-    </tr>
-    <tr>
-     <td>Nombre Completo Alumno</td>
-    </tr>
-    <tr>
-     <td>Nombre Completo Alumno</td>
-    </tr>
-    <tr>
-     <td>Último Completo Alumno</td>
-    </tr>
+    
 
   </table>
   
@@ -148,7 +139,7 @@
 
 
   <div class="examen">
-
+    <span class="c"><i class="bi bi-x-lg"></i></span>
     <h2>Nombre Completo Alumno</h2>
 
     <div class="pregunta">
@@ -203,6 +194,11 @@
         
       </div>
     </div>
+
+
+    <!-- Botón para abrir la ventana modal -->
+<center><button id="modalBtn">Calificar</button></center>
+
     
   </div>
 
@@ -210,6 +206,19 @@
   
 </div>
 
+<!-- Ventana modal -->
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    <span class="close" id="closeBtn"><i class="bi bi-x-lg"></i></span>
+    <!-- La calificación se debe guardar en la base en cuanto cierre el modal
+      y tengo pensado que si lo quiere modificar le de otra vez en calificar-->
+    <label for="calificacion">Calificaión:</label>
+    <input type="number" name="calificacion">
+
+    
+    <div class="tooltip">La calificación debe ser sobre 100</div>
+  </div>
+</div>
 
 
 
@@ -217,6 +226,119 @@
 
 
 	<script type="text/javascript" src="../js/agregar.js"></script>
+  <script type="text/javascript">
+// Obtener el botón de abrir la ventana modal
+const modalBtn = document.getElementById('modalBtn');
+
+// Obtener la ventana modal
+const modal = document.getElementById('myModal');
+
+// Obtener el botón de cerrar
+const closeBtn = document.getElementById('closeBtn');
+
+// Función para abrir la ventana modal
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Función para cerrar la ventana modal
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Evento al hacer clic en el botón de abrir la ventana modal
+modalBtn.addEventListener('click', openModal);
+
+// Evento al hacer clic en el botón de cerrar
+closeBtn.addEventListener('click', closeModal);
+
+// Evento al hacer clic fuera de la ventana modal para cerrarla
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+// Obtener el input y el mensaje emergente
+const input = document.querySelector('.modal-content input');
+const tooltip = document.querySelector('.tooltip');
+
+// Función para mostrar el mensaje emergente
+function showTooltip() {
+  tooltip.classList.add('show');
+  tooltip.classList.remove('hide');
+}
+
+// Función para ocultar el mensaje emergente
+function hideTooltip() {
+  tooltip.classList.add('hide');
+  tooltip.classList.remove('show');
+}
+
+// Evento al pasar el cursor sobre el input
+input.addEventListener('mouseover', showTooltip);
+
+// Evento al quitar el cursor del input
+input.addEventListener('mouseout', hideTooltip);
+
+// Evento al escribir en el input
+input.addEventListener('input', hideTooltip);
+
+
+  </script>
+<script>
+  // Obtener todos los elementos con la clase "calif"
+  const califElements = document.querySelectorAll('.calif');
+
+  // Iterar sobre cada elemento y cambiar el color de fondo según el texto
+  califElements.forEach((califElement) => {
+    const text = califElement.textContent.trim();
+
+    // Asignar el color de fondo correspondiente según el texto
+    switch (text) {
+      case 'AU':
+        califElement.style.backgroundColor = '#203276';
+        break;
+      case 'DE':
+        califElement.style.backgroundColor = '#2B439C';
+        break;
+      case 'SA':
+        califElement.style.backgroundColor = '#40549D';
+        break;
+      case 'NA':
+        califElement.style.backgroundColor = '#E74C3C';
+        break;
+      default:
+        califElement.style.backgroundColor = '#555'; // Color por defecto para SC
+        break;
+    }
+  });
+
+  // Obtenemos el contenedor "examen"
+  const examenContainer = document.querySelector('.resumen');
+
+  // Obtenemos todos los <td> de la tabla
+  const tdElements = document.querySelectorAll('table td');
+
+  // Agregamos un event listener a cada <td>
+  tdElements.forEach((tdElement) => {
+    tdElement.addEventListener('click', () => {
+      // Mostramos el contenedor "examen" cuando se hace clic en un <td>
+      examenContainer.style.display = 'block';
+    });
+  });
+
+   const closeButton = document.querySelector('.c');
+
+  // Agregamos un event listener al botón de cierre
+  closeButton.addEventListener('click', () => {
+    // Ocultamos el div "resumen" cuando se hace clic en el botón de cierre
+    examenContainer.style.display = 'none';
+  });
+
+</script>
+
+
 </body>
 </html>
 
