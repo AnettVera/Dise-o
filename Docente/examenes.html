@@ -89,12 +89,15 @@
               <div class="g">
 
               <label>Ingresa el tipo de preguntas de tu examen</label>
-              <label for="tipo">Opción Multiple:</label>
-              <input type="radio" name="tipo" >
-               <label for="tipo">Abiertas:</label>
-              <input type="radio" name="tipo" >
-              	<br>
-           		<br>
+             <div class="respuesta-radio">
+                <input type="radio" name="opcion2" id="opcion1" class="respuesta">
+                <label for="opcion1">Abiertas</label>
+            </div>
+            <div class="respuesta-radio">
+                <input type="radio" name="opcion2" id="opcion2" class="respuesta">
+                <label for="opcion2">Cerradas</label>
+            </div>
+          <br>
            		<br>
            		<label>Ingresa la cantidad de preguntas que debe tener cada examen:</label>
            		<input type="number" name="cantidad" required="">
@@ -115,9 +118,13 @@
 <!--Comienza el contenido principal-->
 			<div class="contenedor">
         <!--Main es todo el contenedor de los recuadros de la materia-->
-        <div class="main">
+        <div class="m">
             <!-- materia es el contedor completo de la materia y todo el recuadro es a su vez un enlace a ver los examenes de esa materia-->
       		    <div class="examenes">
+                 <label class="switchBtn">
+                            <input type="checkbox" >
+                            <div class="slide round" ></div>
+                        </label>
         <div class="imagen">
                 <img
                     src="https://img.freepik.com/vector-gratis/ilustracion-concepto-examenes_114360-1815.jpg?w=2000">
@@ -127,7 +134,13 @@
             <p>Realizado por: </p>
         </div>
     </div>
+
+
     <div class="examenes">
+                 <label class="switchBtn">
+                            <input type="checkbox" >
+                            <div class="slide round" ></div>
+                        </label>
         <div class="imagen">
                 <img
                     src="https://img.freepik.com/vector-gratis/ilustracion-concepto-examenes_114360-1815.jpg?w=2000">
@@ -137,7 +150,13 @@
             <p>Realizado por: </p>
         </div>
     </div>
+
+
     <div class="examenes">
+                 <label class="switchBtn">
+                            <input type="checkbox" >
+                            <div class="slide round" ></div>
+                        </label>
         <div class="imagen">
                 <img
                     src="https://img.freepik.com/vector-gratis/ilustracion-concepto-examenes_114360-1815.jpg?w=2000">
@@ -147,7 +166,7 @@
             <p>Realizado por: </p>
         </div>
     </div>
-          
+    
         </div>
 
                 <!--2° MODIFICACIÓN-->
