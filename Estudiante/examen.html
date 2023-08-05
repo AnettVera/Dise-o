@@ -63,37 +63,6 @@
 			    </form>
 </div>
 
-<script type="text/javascript">
-function marcarRespuesta(elemento) {
-    const respuestas = document.querySelectorAll('.respuesta-radio');
-    respuestas.forEach(respuesta => {
-        const radio = respuesta.querySelector('.respuesta');
-        const label = respuesta.querySelector('label');
-        if (label === elemento) {
-            radio.checked = true;
-            label.style.backgroundColor = 'transparent';
-            label.style.color = '#03BB85';
-            label.style.content = 'o';
-            label.style.marginRight = '10px';
-            label.style.borderRadius = '50%';
-        } else {
-            radio.checked = false;
-            label.style.backgroundColor = '';
-            label.style.color = '';
-            label.style.content = '';
-            label.style.fontSize = '';
-            label.style.textAlign = '';
-            label.style.lineHeight = '';
-            label.style.width = '';
-            label.style.height = '';
-            label.style.marginRight = '';
-            label.style.borderRadius = '';
-        }
-    });
-}
-
-
-</script>
 
 	
 </body>

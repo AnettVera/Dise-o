@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bienvenido</title>
+	<title>Historial</title>
 	 <link rel="stylesheet" type="text/css" href="../css/estiloHeader/header.css">
 	 <link rel="stylesheet" type="text/css" href="../css/estudiante/acceso.css">
 	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -55,9 +55,146 @@
   </div>
 
   <div class="content">
+    <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">NA</div>
+      </div>
+    </div>
     
+
+
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">SC</div>
+      </div>
+    </div>
+    
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">AU</div>
+      </div>
+    </div>
+    
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">SA</div>
+      </div>
+    </div>
+    
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">SA</div>
+      </div>
+    </div>
+    
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">SA</div>
+      </div>
+    </div>
+    
+        <div class="hist">
+      <center><h3>Probabilidad Unidad l</h3></center>
+      <div class="inf">
+        <div class="prof">
+            <label>Nombre del docente:</label> José Alberto García Muñoz 
+        </div>
+        <div class="date"> 
+            <label>fecha:</label>15/08/23
+        </div>
+      </div>
+      <div class="cal">
+        <label>Calificación:</label><div class="calif">SA</div>
+      </div>
+    </div>
+    
+
     
   </div>
+
+
+  <script type="text/javascript">
+     // Obtener todos los elementos con la clase "calif"
+  const califElements = document.querySelectorAll('.calif');
+
+  // Iterar sobre cada elemento y cambiar el color de fondo según el texto
+  califElements.forEach((califElement) => {
+    const text = califElement.textContent.trim();
+
+    // Asignar el color de fondo correspondiente según el texto
+    switch (text) {
+      case 'AU':
+        califElement.style.backgroundColor = '#203276';
+        break;
+      case 'DE':
+        califElement.style.backgroundColor = '#2B439C';
+        break;
+      case 'SA':
+        califElement.style.backgroundColor = '#40549D';
+        break;
+      case 'NA':
+        califElement.style.backgroundColor = '#E74C3C';
+        break;
+      default:
+        califElement.style.backgroundColor = '#555'; // Color por defecto para SC
+        break;
+    }
+  });
+  </script>
   
 
 </body>
