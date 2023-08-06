@@ -301,7 +301,7 @@ body{
 	position: relative;
 }
 .modal-content input:hover{
-	border-bottom: 3px solid#03BB85
+	border-bottom: 3px solid#03BB85;
 }
 .tooltip.show {
   display: block;
@@ -343,7 +343,18 @@ body{
 .close:hover {
   color: #001256; /* Color rojo para el botón de cerrar al pasar el cursor */
 }
-
+input[type="submit"]{
+	background: #001256;
+	border:none;
+	border-radius: 10px;
+	width: 150px;
+	color: #fff;
+	padding: 5px;
+	cursor: pointer;
+}
+.modal-content input[type="submit"]:hover{
+	background: #03BB85;
+}
 
 
 

@@ -213,10 +213,14 @@
 <div class="modal" id="myModal">
   <div class="modal-content">
     <span class="close" id="closeBtn"><i class="bi bi-x-lg"></i></span>
-    <!-- La calificación se debe guardar en la base en cuanto cierre el modal
-      y tengo pensado que si lo quiere modificar le de otra vez en calificar-->
-    <label for="calificacion">Calificaión:</label>
+    <form>
+      <label for="calificacion">Calificaión:</label>
     <input type="number" name="calificacion">
+    <br>
+    <input type="submit" name="enviar" value="Asignar">
+      
+    </form>
+    
 
     
     <div class="tooltip">La calificación debe ser sobre 100</div>
