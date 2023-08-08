@@ -144,12 +144,12 @@
 	<script type="text/javascript" src="../js/agregar.js"></script>
 	  <script type="text/javascript" src="../js/eliminar.js"></script>
     <script type="text/javascript">
-      // Obtener el elemento con la clase "content"
+      
   const contentElement = document.querySelector('.m');
 
-  // Verificar si el contenido está vacío
+ 
   if (contentElement && contentElement.childElementCount === 0) {
-    // Crear el contenedor para la imagen y el texto
+    
     const emptyContentContainer = document.createElement('div');
     contentElement.style.background = 'none';
     contentElement.style.width = '100%';
@@ -161,17 +161,16 @@
     emptyContentContainer.style.color = '#001256';
     emptyContentContainer.style.margin = '30px auto';
 
-    // Agregar la imagen "vacio.svg" al contenedor
+  
     const imageElement = document.createElement('img');
     imageElement.src = '../IMG/vacioe.svg';
     emptyContentContainer.appendChild(imageElement);
 
-    // Agregar el texto "Aún no hay contenido por mostrar" debajo de la imagen
+    
     const textElement = document.createElement('p');
     textElement.textContent = 'Aún no hay exámenes registrados';
     emptyContentContainer.appendChild(textElement);
 
-    // Agregar el contenedor con la imagen y el texto al elemento "content"
     contentElement.appendChild(emptyContentContainer);
   }
 

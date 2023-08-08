@@ -92,12 +92,12 @@
   });
 
 
-  // Obtener el elemento con la clase "content"
+ 
   const contentElement = document.querySelector('.content');
 
-  // Verificar si el contenido está vacío
+  // verificar si el contenido está vacío
   if (contentElement && contentElement.childElementCount === 0) {
-    // Crear el contenedor para la imagen y el texto
+    //contenedor para la imagen y el texto
     const emptyContentContainer = document.createElement('div');
     contentElement.style.background = 'none';
     emptyContentContainer.style.textAlign = 'center';
@@ -106,17 +106,17 @@
     emptyContentContainer.style.color = '#001256';
     emptyContentContainer.style.margin = '30px auto';
 
-    // Agregar la imagen "vacio.svg" al contenedor
+    
     const imageElement = document.createElement('img');
     imageElement.src = '../IMG/vacio.svg';
     emptyContentContainer.appendChild(imageElement);
 
-    // Agregar el texto "Aún no hay contenido por mostrar" debajo de la imagen
+    
     const textElement = document.createElement('p');
     textElement.textContent = 'Aún no hay contenido por mostrar';
     emptyContentContainer.appendChild(textElement);
 
-    // Agregar el contenedor con la imagen y el texto al elemento "content"
+    
     contentElement.appendChild(emptyContentContainer);
   }
 
