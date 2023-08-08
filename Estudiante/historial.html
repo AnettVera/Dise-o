@@ -56,112 +56,7 @@
   </div>
 
   <div class="content">
-    <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">NA</div>
-      </div>
-    </div>
-    
 
-
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">SC</div>
-      </div>
-    </div>
-    
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">AU</div>
-      </div>
-    </div>
-    
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">SA</div>
-      </div>
-    </div>
-    
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">SA</div>
-      </div>
-    </div>
-    
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">SA</div>
-      </div>
-    </div>
-    
-        <div class="hist">
-      <center><h3>Probabilidad Unidad l</h3></center>
-      <div class="inf">
-        <div class="prof">
-            <label>Nombre del docente:</label> José Alberto García Muñoz 
-        </div>
-        <div class="date"> 
-            <label>fecha:</label>15/08/23
-        </div>
-      </div>
-      <div class="cal">
-        <label>Calificación:</label><div class="calif">SA</div>
-      </div>
-    </div>
     
 
     
@@ -195,6 +90,37 @@
         break;
     }
   });
+
+
+  // Obtener el elemento con la clase "content"
+  const contentElement = document.querySelector('.content');
+
+  // Verificar si el contenido está vacío
+  if (contentElement && contentElement.childElementCount === 0) {
+    // Crear el contenedor para la imagen y el texto
+    const emptyContentContainer = document.createElement('div');
+    contentElement.style.background = 'none';
+    emptyContentContainer.style.textAlign = 'center';
+    emptyContentContainer.style.width = '30%';
+    emptyContentContainer.style.height = '40%';
+    emptyContentContainer.style.color = '#001256';
+    emptyContentContainer.style.margin = '30px auto';
+
+    // Agregar la imagen "vacio.svg" al contenedor
+    const imageElement = document.createElement('img');
+    imageElement.src = '../IMG/vacio.svg';
+    emptyContentContainer.appendChild(imageElement);
+
+    // Agregar el texto "Aún no hay contenido por mostrar" debajo de la imagen
+    const textElement = document.createElement('p');
+    textElement.textContent = 'Aún no hay contenido por mostrar';
+    emptyContentContainer.appendChild(textElement);
+
+    // Agregar el contenedor con la imagen y el texto al elemento "content"
+    contentElement.appendChild(emptyContentContainer);
+  }
+
+
   </script>
   
 

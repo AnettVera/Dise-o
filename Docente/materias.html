@@ -70,7 +70,7 @@
       <div class="min-menA">
 			<a href="#" class="btn-abrir" id="btn-abrir">Editar perfil</a>
 		</div>
-      <div class="salir"><a href="">Salir</a></div>
+      <div class="salir"><a href="">Cerrar sesión</a></div>
       
     </nav>
     <label for="btn-menu"><i class="bi bi-x-lg"></i></label>
@@ -113,112 +113,7 @@
         <div class="main">
             <!-- materia es el contedor completo de la materia y todo el recuadro es a su vez un enlace a ver los examenes de esa materia-->
             
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Desarrollo de aplicaciones web</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
 
-
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="." class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
-              <div class="materia">
-                <label class="switchBtn">
-                            <input type="checkbox" >
-                            <div class="slide round" ></div>
-                        </label>
-                    <div class="img">
-                      <img src="" class="materiaImg">
-                    </div>
-                    <div class="info">
-                      <h2>Nombre de la materia</h2>
-                      <h3>3°B</h3>
-                    </div>
-              </div>
              
 
               
@@ -245,7 +140,40 @@
 
 	<script type="text/javascript" src="../js/agregar.js"></script>
   <script type="text/javascript" src="../js/eliminar.js"></script>
- 
+ <script type="text/javascript">
+      // Obtener el elemento con la clase "content"
+  const contentElement = document.querySelector('.main');
+
+  // Verificar si el contenido está vacío
+  if (contentElement && contentElement.childElementCount === 0) {
+    // Crear el contenedor para la imagen y el texto
+    const emptyContentContainer = document.createElement('div');
+    contentElement.style.background = 'none';
+    contentElement.style.width = '100%';
+    contentElement.style.height = '100hv';
+    contentElement.style.display = 'flex';
+    emptyContentContainer.style.textAlign = 'center';
+    emptyContentContainer.style.width = '30%';
+    emptyContentContainer.style.height = '40%';
+    emptyContentContainer.style.color = '#001256';
+    emptyContentContainer.style.margin = '30px auto';
+
+    // Agregar la imagen "vacio.svg" al contenedor
+    const imageElement = document.createElement('img');
+    imageElement.src = '../IMG/vaciom.svg';
+    emptyContentContainer.appendChild(imageElement);
+
+    // Agregar el texto "Aún no hay contenido por mostrar" debajo de la imagen
+    const textElement = document.createElement('p');
+    textElement.textContent = 'Aún no hay materias registradas';
+    emptyContentContainer.appendChild(textElement);
+
+    // Agregar el contenedor con la imagen y el texto al elemento "content"
+    contentElement.appendChild(emptyContentContainer);
+  }
+
+
+    </script>
 
 </body>
 </html>
