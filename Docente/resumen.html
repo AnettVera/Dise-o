@@ -341,6 +341,36 @@ input.addEventListener('input', hideTooltip);
     // Ocultamos el div "resumen" cuando se hace clic en el botón de cierre
     examenContainer.style.display = 'none';
   });
+const contentElement = document.querySelector('.lista');
+
+  
+  if (contentElement && contentElement.childElementCount === 0) {
+    
+    const emptyContentContainer = document.createElement('div');
+    contentElement.style.background = 'none';
+    contentElement.style.width = '100%';
+    contentElement.style.height = '100hv';
+    contentElement.style.display = 'flex';
+    emptyContentContainer.style.textAlign = 'center';
+    emptyContentContainer.style.width = '30%';
+    emptyContentContainer.style.height = '40%';
+    emptyContentContainer.style.color = '#001256';
+    emptyContentContainer.style.font.size = '20px';
+    emptyContentContainer.style.font.weight = '800';
+    emptyContentContainer.style.margin = '30px auto';
+
+    
+    
+
+    
+    const textElement = document.createElement('h2');
+    
+    textElement.textContent = 'Aún no hay materias registradas';
+    emptyContentContainer.appendChild(textElement);
+
+    contentElement.appendChild(emptyContentContainer);
+  }
+
 
 </script>
 

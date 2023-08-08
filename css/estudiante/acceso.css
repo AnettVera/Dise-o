@@ -10,7 +10,10 @@ body {
   padding: 0;
   background-color: #ffffff;
 }
-
+.hero-text img{
+  width:70%;
+  height: 65%;
+}
 .hexagon-container {
   position: fixed;
   top: 0;
@@ -320,10 +323,7 @@ section h2::after {
   justify-content: center;
   align-items: center;
 }
-.hero-text img{
-    width: 200px;
-    height: 200px;
-}
+
 
 
 .bg {
